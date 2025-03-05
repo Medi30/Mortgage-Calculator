@@ -257,6 +257,15 @@ body{
     margin-top: -10px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .errorcolor{
     background-color: hsl(4, 69%, 50%) !important;
 }
