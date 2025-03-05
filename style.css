@@ -26,10 +26,10 @@ body{
     }
     #leftcont{
         height: fit-content !important;
-        padding: 70px !important;
+        padding: 30px !important;
         padding-top: 40px !important;
         padding-bottom: 20px !important;
-        padding-right: 90px !important;
+        padding-right: 50px !important;
         width: 100% !important;
     }
     #rightcont{
@@ -49,7 +49,7 @@ body{
         left: 0px !important;
     }
     #calcbtn{
-        margin-left: 12%;
+        margin-left: 10%;
     }
 }
 
