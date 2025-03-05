@@ -157,8 +157,9 @@ function keydown(event){
         let value = this.value
         let lastChar = value[value.length - 1]
         if (!/^[0-9]$/.test(lastChar) && lastChar !== "." && lastChar !== "Backspace") {
-            event.preventDefault();
+            return
         }
+        event.preventDefault();
     }
 }
 //Paste only numbers
