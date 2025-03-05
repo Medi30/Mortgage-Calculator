@@ -63,7 +63,7 @@ body{
 #rightcont{
     background-color: hsl(202, 55%, 16%);
     color: hsl(203, 41%, 72%);
-    width: 450px;
+    width: 490px;
     height: 600px;
     flex-shrink: 0;
     border-radius: 10px;
