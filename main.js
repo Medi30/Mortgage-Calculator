@@ -19,12 +19,18 @@ let errors = {
 
 amount.addEventListener("paste", paste)
 amount.addEventListener("keydown", keydown)
+amount.addEventListener("input", keydown)
+amount.addEventListener("touchstart", keydown)
 amount.addEventListener("click", highlight)
 term.addEventListener("paste", paste)
 term.addEventListener("keydown", keydown)
+term.addEventListener("input", keydown)
+term.addEventListener("touchstart", keydown)
 term.addEventListener("click", highlight)
 rate.addEventListener("paste", paste)
 rate.addEventListener("keydown", keydown)
+rate.addEventListener("input", keydown)
+rate.addEventListener("touchstart", keydown)
 rate.addEventListener("click", highlight)
 repayCheck.addEventListener("click", checkbox)
 interestCheck.addEventListener("click", checkbox)
@@ -136,15 +142,23 @@ function hoveroff(event){
 
 //Only numbers in input
 function keydown(event){
-    if (event.ctrlKey && event.key === "v"){
-        return;
+    if (event.type === "keydown"){
+        if (event.ctrlKey && event.key === "v"){
+            return;
 
-    }
-    if (!/^[0-9]$/.test(event.key) && event.key !== "Backspace"){
-        if (this.id === "rate" && event.key === "."){
-            return
         }
-        event.preventDefault()
+        if (!/^[0-9]$/.test(event.key) && event.key !== "Backspace"){
+            if (this.id === "rate" && event.key === "."){
+                return
+            }
+            event.preventDefault()
+        }
+    }else if (event.type === "input" || event.type === "touchstart"){
+        let value = this.value
+        let lastChar = value[value.length - 1]
+        if (!/^[0-9]$/.test(lastChar) && lastChar !== "." && lastChar !== "Backspace") {
+            event.preventDefault();
+        }
     }
 }
 //Paste only numbers
