@@ -30,10 +30,12 @@ body{
         padding-top: 40px !important;
         padding-bottom: 20px !important;
         padding-right: 90px !important;
+        width: 100% !important;
     }
     #rightcont{
         margin-left: 0px !important;
         border-radius: 0px !important;
+        width: 100% !important;
 
     }
     #inputcont{
