@@ -1,0 +1,274 @@
+body{
+    background-color: hsl(202, 86%, 94%);
+    color: blanchedalmond;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+@font-face {
+    font-family: 'jakarta';
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+
+#maincont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 65px;
+}
+
+@media (max-width: 450px){
+    #maincont{
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    #leftcont{
+        height: fit-content !important;
+    }
+    #rightcont{
+        margin-left: 0px !important;
+        width: 490px !important;
+        border-radius: 0px !important;
+    }
+    #inputcont{
+        flex-direction: column !important;
+    }
+    #interestText{
+        margin: 0px !important
+    }
+    #rateError{
+        position: relative;
+        left: 0px !important;
+    }
+    #calcbtn{
+        margin-left: 15%;
+    }
+}
+
+#leftcont{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(202, 55%, 16%);
+    width: 490px;
+    height: 600px;
+    flex-shrink: 0;
+    padding: 30px;
+    padding-right: 95px;
+    border-radius: 10px;
+
+}
+
+#rightcont{
+    background-color: hsl(202, 55%, 16%);
+    color: hsl(203, 41%, 72%);
+    width: 450px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 80px ;
+    margin-left: -65px;
+    padding: 30px;
+    flex-shrink: 1;
+}
+
+
+#headerText{
+    font-size: 23px;
+    font-weight: 600;
+    color: hsl(202, 55%, 16%);
+}
+#clearall{
+    float: right;
+    text-decoration: underline;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+#inputcont{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.checkboxdiv{
+    border: 0.5px solid hsl(200, 26%, 54%);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+}
+
+.checkboxdivSelect{
+    border: 0.5px solid hsl(61, 70%, 52%);
+    background-color: hsla(61, 70%, 52%, 0.1);
+}
+
+.checkboxtext{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: hsl(202, 55%, 16%);
+
+}
+
+#calcbtn{
+    border-radius: 30px;
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+    width: 250px;
+    height: 45px;
+    margin-top: 20px;
+}
+
+.btn-outline-primary:hover {
+    background-color: hsl(61, 100%, 53%) !important;
+}
+
+#interestText{
+    margin-left: 70px;
+}
+
+.input-group-text{
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(200, 24%, 40%);
+    font-weight: 500;
+}
+
+.input-group-text-error{
+    color: white
+}
+
+
+.commontext{
+    color: hsl(200, 24%, 40%);
+    font-weight: 500;
+}
+
+.form-check-input{
+    border: 1px solid hsl(202, 55%, 16%);
+    position: relative;
+    
+}
+.form-check-input:checked{
+    box-shadow: none;
+    outline: none;
+    background-color: white;
+    border-color: hsl(61, 70%, 52%);
+}
+.form-check-input:checked::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: hsl(61, 70%, 52%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#calcicon{
+    margin-right: 10px;
+}
+
+
+.form-control:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: hsl(61, 70%, 52%);
+}
+
+
+#defRightCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25%;
+}
+
+#rateError{
+    position: relative; 
+    left: 80px;
+}
+
+-----------------------------------------------------------------------
+#paymentcont{
+    background-color: hsl(201, 71%, 11%);
+    height: fit-content;
+    border-radius: 7px;
+    border-top: 4px solid hsl(61, 70%, 52%);
+    margin-top: 50px;
+    padding: 30px;
+    
+}
+
+#repay{
+    color: hsl(61, 70%, 52%);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#totalrepay{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.resultHeader{
+    font-size: 25px;
+    color: hsl(202, 86%, 94%);
+    font-weight: 700;
+}
+
+/*-------------------[HighLights]--------------------------------------*/
+
+.input_h{
+    border: 1.1px solid hsl(202, 55%, 16%);
+    border-radius: 7px;
+    margin: -1.5px;
+}
+.checkbox_h{
+    border: 0.5px solid hsl(61, 70%, 52%);
+}
+
+
+/*--------------------[Utility]----------------------------------------*/
+.hide{
+    display: none !important;
+}
+.vishide{
+    visibility: hidden;
+}
+.errortext{
+    color: hsl(4, 69%, 50%);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.errorcolor{
+    background-color: hsl(4, 69%, 50%) !important;
+}
+
+.errorborder{
+    border-color: hsl(4, 69%, 50%) !important;;
+}
+
+.selectborder{
+    border-color: hsl(61, 70%, 52%) !important;
+}
+
+.selectcolor{
+    background-color: hsl(61, 70%, 52%) !important;;
+}

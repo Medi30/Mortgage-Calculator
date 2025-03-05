@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="maincont">
+    <div id="leftcont">
+      <p id="headerText">Mortgage Calculator<span id="clearall" class="commontext">Clear All</span></p>
+      <p class="commontext">Mortgage Amount</p>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">$</span>
+        <input id="amount" type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" maxlength="20" onmouseenter="hover(event)" onmouseleave="hoveroff(event)">
+      </div>
+        <p id="amountError" class="errortext hide">This field is required</p>
+        <p id="mortgageP" class="commontext">Mortgage Term<span class="commontext" id="interestText">Interest Rate</span></p>
+      <div id="inputcont">
+      <div id="termInput" class="input-group mb-3">
+        <input id="term" type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" maxlength="2" onmouseenter="hover(event)" onmouseleave="hoveroff(event)">
+        <span class="input-group-text">Years</span>
+      </div>
+      <!--<span class="commontext" id="interestText">Interest Rate</span>-->
+      <div id="rateInput"  class="input-group mb-3" >
+        <input id="rate" type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" maxlength="5" onmouseenter="hover(event)" onmouseleave="hoveroff(event)">
+        <span class="input-group-text">%</span>
+      </div>
+      </div>
+      <span id="termError" class="errortext vishide">This field is required</span><span id="rateError" class="errortext hide">This field is required</span>
+      <p class="commontext">Mortgage Type</p>
+      <div class="checkboxdiv">
+        <div class="form-check checkboxtext" onmouseenter="hover(event)" onmouseleave="hoveroff(event)">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="repayCheck" >
+          <label class="form-check-label" for="repay Check">
+            Repayment
+          </label>
+        </div>
+      </div>
+      <div class="checkboxdiv">
+        <div class="form-check checkboxtext" onmouseenter="hover(event)" onmouseleave="hoveroff(event)">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="interestCheck" >
+          <label class="form-check-label" for="interestCheck">
+            Interest only
+          </label>
+        </div>
+      </div>
+      <p id="checkError" class="errortext hide">This field is required</p>
+      <button type="button" id="calcbtn" class="btn btn-outline-primary" ><img id="calcicon" src="/assets/images/icon-calculator.svg" >Calculate Repayments</button>
+
+    </div>
+    <div id="rightcont">
+      <!-- Empty results start -->
+       <div id="defRightCont" class="">
+        <img src="/assets/images/illustration-empty.svg">
+        <p class="resultHeader">Results shown here</p>
+        <p>Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+      <!-- Empty results end -->
+
+      <!-- Completed results start -->
+      <div id="resultRightCont" class="hide">
+        <h1 class="resultHeader">Your results</h1>
+        <p id="resultText">Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div id="paymentcont">
+          <div id="monthlyRepayCont" class="">
+          <p>Your monthly repayments</p>
+          <p id="repay">$1000</p>
+        </div>
+        <hr>
+        <p>Total you'll repay over the term</p>
+        <p id="totalrepay">$200.000</p>
+      </div>
+      </div>
+
+      
+
+      <!-- Completed results end -->
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Larion Horecki</a>.
+  </div>
+  <script src="/main.js"></script>
+</body>
+</html>
