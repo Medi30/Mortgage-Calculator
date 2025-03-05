@@ -27,6 +27,9 @@ body{
     #leftcont{
         height: fit-content !important;
         padding-right: 50px !important;
+        padding: 70px !important;
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
     }
     #rightcont{
         margin-left: 0px !important;
@@ -44,7 +47,7 @@ body{
         left: 0px !important;
     }
     #calcbtn{
-        margin-left: 15%;
+        margin-left: 12%;
     }
 }
 
