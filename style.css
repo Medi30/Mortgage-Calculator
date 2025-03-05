@@ -19,7 +19,7 @@ body{
     margin-left: 65px;
 }
 
-@media (max-width: 450px){
+@media (max-width: 550px){
     #maincont{
         flex-direction: column;
         margin-left: 0px;
@@ -29,7 +29,6 @@ body{
     }
     #rightcont{
         margin-left: 0px !important;
-        width: 490px !important;
         border-radius: 0px !important;
     }
     #inputcont{
