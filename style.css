@@ -49,7 +49,11 @@ body{
         left: 0px !important;
     }
     #calcbtn{
-        margin-left: 10%;
+
+    }
+    #buttonDiv{
+        display: flex;
+        justify-content: center;
     }
 }
 
