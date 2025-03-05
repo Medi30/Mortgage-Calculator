@@ -49,10 +49,6 @@ body{
     #calcbtn{
         margin-left: 12%;
     }
-    body {
-        transform: scale(1.2);
-        transform-origin: top center;
-    }
 }
 
 #leftcont{
