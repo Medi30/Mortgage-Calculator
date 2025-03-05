@@ -19,18 +19,12 @@ let errors = {
 
 amount.addEventListener("paste", paste)
 amount.addEventListener("keydown", keydown)
-amount.addEventListener("input", keydown)
-amount.addEventListener("touchstart", keydown)
 amount.addEventListener("click", highlight)
 term.addEventListener("paste", paste)
 term.addEventListener("keydown", keydown)
-term.addEventListener("input", keydown)
-term.addEventListener("touchstart", keydown)
 term.addEventListener("click", highlight)
 rate.addEventListener("paste", paste)
 rate.addEventListener("keydown", keydown)
-rate.addEventListener("input", keydown)
-rate.addEventListener("touchstart", keydown)
 rate.addEventListener("click", highlight)
 repayCheck.addEventListener("click", checkbox)
 interestCheck.addEventListener("click", checkbox)
@@ -153,13 +147,6 @@ function keydown(event){
             }
             event.preventDefault()
         }
-    }else if (event.type === "input" || event.type === "touchstart"){
-        let value = this.value
-        let lastChar = value[value.length - 1]
-        if (!/^[0-9]$/.test(lastChar) && lastChar !== "." && lastChar !== "Backspace") {
-            return
-        }
-        event.preventDefault();
     }
 }
 //Paste only numbers
