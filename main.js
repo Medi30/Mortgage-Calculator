@@ -285,14 +285,14 @@ function calculation(){
     let totalPayments = years *12
     let monthlyPayment = ((total * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -totalPayments))).toFixed(2);
     let montlystr = monthlyPayment.toString()
-    let montlyPaymentComma = Number(monthlyPayment).toLocaleString()
+    let montlyPaymentComma = Number(monthlyPayment).toLocaleString("en-us")
 
     repay.textContent = montlyPaymentComma
     
     let totalAmount = ((monthlyPayment * years * 12)).toFixed(2)
     let totalstr = totalAmount.toString()
 
-    let totalSumComma =  Number(totalAmount).toLocaleString()
+    let totalSumComma =  Number(totalAmount).toLocaleString('en-us')
 
     repay.textContent = "$" + montlyPaymentComma
     totalRepay.textContent = "$" + totalSumComma
