@@ -309,5 +309,7 @@ function calculation(){
         resultRightCont.classList.remove("hide")
         document.querySelector("#monthlyRepayCont").classList.remove("hide")
     }
+
+    document.querySelector("#rightcont").scrollIntoView({behavior: "smooth", block: "end"})
    
 }
