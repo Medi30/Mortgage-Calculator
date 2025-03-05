@@ -37,15 +37,15 @@ let prevemblem = null
 
 forMobileRearange()
 window.addEventListener("resize", resize);
-let mode = window.innerWidth <= 550 ? "phone" : "desktop"; // Set initial mode
+let mode = window.innerWidth <= 700 ? "phone" : "desktop"; // Set initial mode
 
 function resize() {
-    if (window.innerWidth <= 550 && mode !== "phone") {
+    if (window.innerWidth <= 700 && mode !== "phone") {
         console.log("Switched to mobile mode");
         termDiv.insertAdjacentElement("afterend", interestText);
         termDiv.insertAdjacentElement("afterend", errors.term);
         mode = "phone";
-    } else if (window.innerWidth > 450 && mode !== "desktop") {
+    } else if (window.innerWidth > 700 && mode !== "desktop") {
         console.log("Switched to desktop mode");
         mortgageP.insertAdjacentElement("beforeend",interestText)
         errors.rate.insertAdjacentElement("beforebegin",errors.term)
@@ -55,7 +55,7 @@ function resize() {
 }
 
 function forMobileRearange(){
-    if (window.innerWidth <= 550){
+    if (window.innerWidth <= 700){
         termDiv.insertAdjacentElement("afterend",interestText)
         termDiv.insertAdjacentElement("afterend",errors.term)
     }else{
