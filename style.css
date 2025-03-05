@@ -16,7 +16,6 @@ body{
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    max-width: 1000px;
     margin-left: 65px;
 }
 
@@ -57,7 +56,7 @@ body{
     padding: 30px;
     padding-right: 95px;
     border-radius: 10px;
-
+    flex-shrink: 0.2;
 }
 
 #rightcont{
@@ -71,7 +70,7 @@ body{
     border-bottom-left-radius: 80px ;
     margin-left: -65px;
     padding: 30px;
-    flex-shrink: 1;
+    flex-shrink: 0.3;
 }
 
 
